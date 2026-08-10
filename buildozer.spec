@@ -1,0 +1,27 @@
+[app]
+title = WahidVR Kamera
+package.name = wahidvr
+package.domain = com.wahidvr
+source.dir = .
+source.include_exts = py,png,jpg,kv,atlas
+version = 2.0
+requirements = python3,kivy,camera,android,opencv-python-headless,numpy,pillow
+orientation = portrait
+fullscreen = 0
+android.permissions = CAMERA,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE,INTERNET
+android.api = 33
+android.minapi = 21
+android.ndk = 25b
+android.sdk = 33
+android.accept_sdk_license = True
+android.arch = arm64-v8a
+android.arch_arm = arm7-v8a
+android.arch_x86 = x86
+android.add_gradle_m2_repository = True
+android.gradle_dependencies = com.google.android.gms:play-services:+
+android.logcat_filters = *:S python:I
+android.lower_api = 21
+p4a.branch = develop
+presplash.filename = %(source.dir)s/presplash.png
+presplash.color = 0,0.52,0.83,1
+icon.filename = %(source.dir)s/icon.png
