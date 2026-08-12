@@ -1,60 +1,67 @@
-# WahidVR Kamera - Android Version
+# WahidVR Kamera - Android App
 
-## Cara Build APK
+## Build APK dari Windows 11
 
-### Persiapan (Ubuntu/Linux)
-```bash
-# Install dependencies
-sudo apt update
-sudo apt install -y build-essential git python3 python3-dev ffmpeg libsdl2-dev \
-    libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev libportmidi-dev \
-    libswscale-dev libavformat-dev libavcodec-dev zlib1g-dev libgstreamer1.0 \
-    gstreamer1.0-plugins-base automake autoconf libtool pkg-config \
-    libgtk-3-dev libnotify-dev freeglut3-dev libgstreamer-plugins-base1.0-dev
+### Langkah 1: Install Android Studio
+1. Download: https://developer.android.com/studio
+2. Install seperti biasa
+3. Buka Android Studio, tunggu setup selesai
 
-# Install Buildozer
-pip install buildozer
+### Langkah 2: Buka Project
+1. Buka Android Studio
+2. Klik **File → Open**
+3. Pilih folder `C:\Koding\WahidVR-Android`
+4. Tunggu Gradle sync selesai
 
-# Install Cython
-pip install cython
-```
+### Langkah 3: Build APK
+1. Klik **Build → Build Bundle(s) / APK(s) → Build APK(s)**
+2. Tunggu sampai selesai (5-10 menit)
+3. Klik **locate** di pojok kanan bawah
+4. APK ada di: `app\build\outputs\apk\debug\app-debug.apk`
 
-### Build APK
-```bash
-# Masuk ke folder project
-cd wahidvr-android
-
-# Build APK (debug)
-buildozer android debug
-
-# APK akan ada di: bin/wahidvr-2.0-debug.apk
-
-# Build APK (release)
-buildozer android release
-```
-
-### Install di Android
-```bash
-# Via USB (aktifkan USB Debugging)
-adb install bin/wahidvr-2.0-debug.apk
-
-# Atau copy APK ke HP dan install manual
-```
+### Langkah 4: Install di HP
+1. Copy `app-debug.apk` ke HP
+2. Buka file di HP
+3. Klik **Install**
+4. Jika muncul "Unknown Source", klik **Allow**
 
 ## Fitur
-- 400+ Efek VR
-- Kamera real-time
+- 30 Efek Kamera Real-time
+- Kamera Depan & Belakang
 - Foto dengan efek
-- Gallery bawaan
-- Dark theme
+- Dark Theme
+- UI Modern
+
+## Efek yang Tersedia
+- Original
+- Neon Glow
+- Cyberpunk
+- Vintage
+- Thermal
+- Sketch
+- Edge Detect
+- Pixelate
+- Blur
+- Sharpen
+- Sepia
+- Grayscale
+- Invert
+- Saturation
+- Brightness
+- Contrast
+- RGB Channels
+- Mirror
+- Kaleidoscope
+- Emboss
+- Mean Filter
+- Gaussian
+- Motion Blur
+- Oil Painting
+- Cartoon
+- Solarize
+- Posterize
 
 ## Spesifikasi
-- Android 5.0+ (API 21)
+- Android 7.0+ (API 24)
 - RAM: 2GB minimum
-- Storage: 100MB
-
-## Troubleshooting
-1. Jika build gagal, coba: `buildozer android clean`
-2. Pastikan semua dependencies terinstall
-3. Gunakan Python 3.10 atau 3.11
-4. Pastikan koneksi internet stabil saat build pertama kali
+- Storage: 50MB
