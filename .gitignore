@@ -1,34 +1,11 @@
-# Build
-bin/
-build/
-dist/
-*.exe.spec
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-*.egg-info/
-*.egg
-
-# Kivy
-*.kv~
-
-# Android
-*.apk
-*.aab
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
+*.iml
+.gradle
+/local.properties
+/.idea
 .DS_Store
-Thumbs.db
-
-# Logs
-*.log
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+/app/build
