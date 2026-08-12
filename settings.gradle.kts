@@ -14,4 +14,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "WahidVR Kamera"
-include ':app'
+include(":app")
