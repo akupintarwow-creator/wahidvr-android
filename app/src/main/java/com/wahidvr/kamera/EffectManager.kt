@@ -1103,6 +1103,7 @@ class EffectManager {
     }
 
     private fun applyWormhole(pixels: IntArray, width: Int, height: Int) {
+        val temp = pixels.copyOf()
         val cx = width / 2
         val cy = height / 2
         for (y in 0 until height) {
@@ -1341,26 +1342,6 @@ class EffectManager {
                 for (x in 0 until width) {
                     pixels[y * width + x] = Color.GREEN
                 }
-            }
-        }
-    }
-
-    private var temp = IntArray(0)
-    private fun applyWormhole(pixels: IntArray, width: Int, height: Int) {
-        temp = pixels.copyOf()
-        val cx = width / 2
-        val cy = height / 2
-        for (y in 0 until height) {
-            for (x in 0 until width) {
-                val idx = y * width + x
-                val dx = x - cx
-                val dy = y - cy
-                val dist = Math.sqrt((dx * dx + dy * dy).toDouble())
-                val angle = Math.atan2(dy.toDouble(), dx.toDouble())
-                val twist = angle + dist * 0.01
-                val newX = (cx + dist * Math.cos(twist)).toInt().coerceIn(0, width - 1)
-                val newY = (cy + dist * Math.sin(twist)).toInt().coerceIn(0, height - 1)
-                pixels[idx] = temp[newY * width + newX]
             }
         }
     }
